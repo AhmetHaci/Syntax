@@ -35,6 +35,5 @@ public class Timer{
         System.out.println("     \t \t***************** ");
         scan.close();
         
-        
-    }
+            }
 }
