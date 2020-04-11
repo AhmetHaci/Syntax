@@ -1,65 +1,109 @@
 package com.syntax.class23;
 
-public class Computer {
+class SmartMachine {
+
+	public void smart() {
+
+		System.out.println("I am a smart machine");
+
+	}
+
+} .kn 
+
+public class Computer extends SmartMachine {
+
 	String brand;
 
-	public Computer (String brand) {
-		this.brand=brand;
+	public Computer(String brand) {
+
+		this.brand = brand;
+
 	}
-	public void operating() {
-		System.out.println(brand + " has operation system");
+
+	public void run() {
+
+		System.out.println(brand + " can run the system");
+
 	}
-	public void play() {
-		System.out.println(brand + " has music player");
+
+	public void save() {
+
+		System.out.println(brand + " can save input");
+
+	}
+
+	public void transfer() {
+
+		System.out.println(brand + " can transfer information");
+
+	}
+
+	public void storage() {
+
+		System.out.println(brand + " can store input");
+
+	}
+
 }
 
-public class Apple extends Computer {
-   public Apple (String brand) {
-	   super (brand);
-   }
-   public void operating() {
-		System.out.println(brand + " has operation system by Apple company");
-}
-   public void play() {
-		System.out.println(brand + " has IMusic App on desktop");
-}
+class Apple extends Computer {
+
+	public Apple(String brand) {
+
+		super(brand);
+
+	}
+
+	public void run() {
+
+		System.out.println(brand + " can run the system faster");
+
+	}
+
+	public void save() {
+
+		System.out.println(brand + " saves input in different way");
+
+	}
+
+	public void transfer() {
+
+		super.transfer();
+
+	}
+
+	public void safe() {
+
+		System.out.println(brand + " is safer");
+
+	}
+
 }
 
-class Lenova extends Computer {
+class Lenovo extends Computer {
 
-	public Lenova (String brand) {
-		   super (brand);
-	   }
-	   public void operating() {
-			System.out.println(brand + " has operation system by Microsoft");
+	public Lenovo(String brand) {
+
+		super(brand);
+
 	}
-	   public void play() {
-			System.out.println(brand + " plays musics with Windows Media Player");
+
+	public void run() {
+
+		super.run();
+
+		transfer();
+
 	}
-	}
+
+}
 
 class HP extends Computer {
 
-	public HP (String brand) {
-		   super (brand);
-	   }
-	   public void operating() {
-			System.out.println(brand + " has operation system by Microsoft");
-	}
-	   public void play() {
-			System.out.println(brand + " play videos with Winapp");
-	}
+	public HP(String brand) {
+
+		super(brand);
+
 	}
 
-class Dell extends Computer {
-	public Dell (String brand) {
-		   super (brand);
-	   }
-	   public void operating() {
-			System.out.println(brand + " has operation system by Microsoft");
-	}
-	   public void play() {
-			System.out.println(brand + " music with Dell Music");
-	}
-	}
 }

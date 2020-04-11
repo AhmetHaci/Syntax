@@ -2,45 +2,88 @@ package com.syntax.class23;
 
 public class Student {
 	
- public void study () {
-	 System.out.println("Student study in the dorm");
-	  }
+	public void study() {
 
- public void sleep () {
-	 System.out.println("Students sleeps");
- }
- 
- public void eat () {
-	 System.out.println("Students eats");
- }
-}
+		System.out.println("Student studies");
 
-class SyntaxStudent extends Student{
-	public void study () {             // Overrided method
-		 System.out.println("Syntax students study  hard in next 4 months");
-		}
-	public void focus () {
-		 System.out.println("Syntax students are focused on Java");
-	 }
-}
-class CollegeStudent extends Student{
-	public void study (String school, String str) {          // Overrided method
-		school="Coolege";
-		str="study";
-		 System.out.println(school+" students "+str+" hard in next 4 months");
-}
-	public void play () {
-		 System.out.println("Students play soccer");
-}
-}
-class SchoolStudent extends Student{
-	public void study (String name,int hour) {                  // Overrided method
-		name="school";
-	    hour=5;
-		 System.out.println("Student study in the dorm "+hour+ "hours a day");
-}
-
-	public void hw () {
-		 System.out.println("School students get HW 3 days a week");
-}
 	}
+
+
+
+	public void doHomework() {
+
+		System.out.println("Students do homeworks");
+
+	}
+
+}
+
+
+
+class SyntaxStudent extends Student {
+
+
+
+	@Override
+
+	public void study() {
+
+		System.out.println("Syntax students are coding");
+
+	}
+
+
+
+	public void getJob() {
+
+		System.out.println("Syntax students become QA automation engineer");
+
+	}
+
+	
+
+	public void accessParentOverridenMethod() {
+
+		super.study();
+
+	}
+
+}
+
+
+
+class CollegeStudent extends Student {
+
+	@Override
+
+	public void study() {
+
+		System.out.println("College Students have exams");
+
+	}
+
+
+
+	void attend() {
+
+		System.out.println("Students attend school ceremonies");
+
+	}
+
+}
+
+
+
+class SchoolStudent extends Student {
+
+	@Override
+
+	public void study() {
+
+		super.study();
+
+		System.out.println("School students are on vacation");
+
+	}
+
+}
