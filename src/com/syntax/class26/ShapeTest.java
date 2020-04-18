@@ -8,8 +8,8 @@ public class ShapeTest {
 		c.calculatePerimeter(10);
 		
 		Square sq = new Square ();
-		sq.calculateArea(12);
-		sq.calculatePerimeter(3);
+		sq.calculateArea(10);
+		sq.calculatePerimeter(10);
 	}
 
 }

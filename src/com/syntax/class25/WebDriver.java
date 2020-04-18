@@ -13,58 +13,74 @@ public interface WebDriver {
 	 void findElement();
 	
 }
+class Main1 {
+	String name;
 
-class ChromeDriver implements WebDriver{
+	Main1 (String name){
+	this.name=name;
+}
+}
+class ChromeDriver extends Main1 implements WebDriver{
+
+	ChromeDriver(String name) {
+		super(name);
+		
+	}
 
 	@Override
 	public void openBrowser() {
-		System.out.println("Chrome driver opens browser");
+		System.out.println(name +" driver opens browser");
 		
 	}
 
 	@Override
 	public void closeBrowser() {
-		System.out.println("Chrome driver close browser");
+		System.out.println(name +" driver close browser");
 		
 	}
 
 	@Override
 	public void maximizeWindow() {
-		System.out.println("Chrome driver maximize Window");
+		System.out.println(name +" driver maximize Window");
 		
 	}
 
 	@Override
 	public void findElement() {
-		System.out.println("Chrome driver find Element");
+		System.out.println(name +" driver find Element");
 		
 	}
 	
 }
 
-class FirefoxDriver implements WebDriver{
+class FirefoxDriver extends Main1 implements WebDriver{
+
+	FirefoxDriver(String name) {
+		super(name);
+	
+	}
 
 	@Override
 	public void openBrowser() {
-		System.out.println("Firefox driver opens browser");
+		System.out.println(name +" driver opens browser");
 		
 	}
 
 	@Override
 	public void closeBrowser() {
-		System.out.println("Firefox driver close browser");
+		System.out.println(name +" driver close browser");
 		
 	}
 
 	@Override
 	public void maximizeWindow() {
-		System.out.println("Firefox Driver   maximize Window");
+		System.out.println(name +" Driver   maximize Window");
 		
 	}
 
 	@Override
 	public void findElement() {
-		System.out.println("Firefox Driver find Element");
+		System.out.println(name +" Driver find Element");
 		
 	}
 	

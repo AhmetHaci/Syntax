@@ -1,22 +1,47 @@
 package com.replit.syntax;
 
- class Main {
-	
-	public static int maxValue(int[] arr) {
-			int maxValue = arr[0];
-			for (int i = 1; i < arr.length; i++) {
-				if (arr[i] > maxValue)
-					maxValue = arr[i];
-
-			}
-
-			return maxValue;
-
+class Main implements Functions {
+	  
+	  @Override
+		public void display(double result) {
+			System.out.println("Result is ::: " + result);
 		}
-		public static void main(String[] args) {
-			int[] arr = {5,12,-3,7,3,22};
-			System.out.println(maxValue(arr)); //should print 22
+
+		@Override
+		public double adding(double firstNumber, double secondNumber) {
+			return firstNumber + secondNumber;
+		}
+
+		@Override
+		public double subtracting(double firstNumber, double secondNumber) {
+			return firstNumber - secondNumber;
+		}
+
+		@Override
+		public double multiply(double firstNumber, double secondNumber) {
+			return firstNumber * secondNumber;
+		}
+
+		@Override
+		public double dividing(double firstNumber, double secondNumber) {
+			return firstNumber / secondNumber;
 		}
 		
-		
+		public static void main (String [] args) {
+			double firstNumber = 100; 
+			double secondNumber = 20;
+			double result; 
+			
+			Main run = new Main(); 
+			result = run.adding(firstNumber, secondNumber);
+			run.display(result);
+			
+			result = run.subtracting(firstNumber, secondNumber);
+			run.display(result);
+			result = run.multiply(firstNumber, secondNumber);
+			run.display(result);
+			result = run.dividing(firstNumber, secondNumber);
+			run.display(result);
+		}
+
 	}
